@@ -1,5 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
 
+import { DAMNLogoIcon } from "../icons/damn-logo";
 import { SearchIcon } from "../icons/search";
 import { BurguerMenu } from "./burguer-menu";
 import { Nav } from "./nav";
@@ -11,7 +12,7 @@ export function HeaderComponent() {
         <BurguerMenu />
       </div>
       <div className="m-auto flex min-w-[7.5rem] max-w-[12.5rem] items-center justify-center overflow-hidden">
-        LOGO
+        <DAMNLogoIcon />
       </div>
       <div className="flex h-[100%] items-center">
         <Nav />
