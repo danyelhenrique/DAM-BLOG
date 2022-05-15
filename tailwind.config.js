@@ -5,6 +5,22 @@ module.exports = {
       colors: {
         "border-header": "#e5e5e5",
       },
+      width: {
+        "100%": "100%",
+      },
+      maxWidth: {
+        "section-max": "100rem",
+        "home-left-max": "1600px",
+      },
+      padding: {
+        "section-padding": "4rem",
+      },
+      gridTemplateRows: {
+        "home-first-section-left": "minmax(2.5rem, auto) 1fr",
+      },
+      gap: {
+        "home-left-area-gap": "2rem",
+      },
     },
   },
   plugins: [],

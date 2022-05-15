@@ -11,9 +11,16 @@ export function HeaderComponent() {
       <div className="flex w-[3.5rem] items-center justify-center p-[0px_0.5rem]">
         <BurguerMenu />
       </div>
-      <div className="m-auto flex min-w-[7.5rem] max-w-[12.5rem] items-center justify-center overflow-hidden">
-        <DAMNLogoIcon />
-      </div>
+      <a
+        href="/"
+        className="m-auto mr-[20px] flex min-w-[7.5rem] max-w-[12.5rem] items-center justify-center overflow-hidden"
+      >
+        <DAMNLogoIcon
+          svgProps={{
+            height: 37,
+          }}
+        />
+      </a>
       <div className="flex h-[100%] items-center">
         <Nav />
       </div>

@@ -12,9 +12,9 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-
-import tailwindStylesheetUrl from "./styles/tailwind.css";
+import RootContainer from "./Containers/components/root";
 import { getUser } from "./session.server";
+import tailwindStylesheetUrl from "./styles/tailwind.css";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: tailwindStylesheetUrl }];
@@ -43,8 +43,10 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="h-full">
-        <Outlet />
+      <body className="h-full pb-[1000%]">
+        <RootContainer>
+          <Outlet />
+        </RootContainer>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
