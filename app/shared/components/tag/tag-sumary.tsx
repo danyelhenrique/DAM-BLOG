@@ -1,9 +1,12 @@
-export function TagSummartComponent({
-  children,
-}: {
-  children?: React.ReactNode;
-}) {
+import type { TagSummartComponentProps } from "./types";
+
+export function TagSummartComponent(props: TagSummartComponentProps) {
   return (
-    <div className="flex border-b-2 border-black border-solid">{children}</div>
+    <div
+      className={`${props.cl} flex border-t-2 border-solid border-black`}
+      {...props}
+    >
+      {props.children}
+    </div>
   );
 }

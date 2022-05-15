@@ -16,3 +16,8 @@ export type TagHeadingComponentProps =
   React.HTMLAttributes<HTMLHeadingElement> & {
     children?: React.ReactNode;
   };
+
+export type TagSummartComponentProps = React.HTMLAttributes<HTMLDivElement> & {
+  children?: React.ReactNode;
+  cl?: string;
+};
