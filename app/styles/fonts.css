@@ -1,0 +1,111 @@
+@font-face {
+  font-family: BrandonText;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/BrandonText-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: BreveText;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/BreveText-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: BreveText;
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  src: url("/fonts/BreveText-BoldItalic.woff") format("woff");
+}
+@font-face {
+  font-family: BreveText;
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/BreveText-Book.woff") format("woff");
+}
+@font-face {
+  font-family: BreveText;
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+  src: url("/fonts/BreveText-BookItalic.woff") format("woff");
+}
+@font-face {
+  font-family: Druk;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/Druk-Bold-Web.woff2") format("woff2"),
+    url("/fonts/Druk-Bold-Web.woff") format("woff");
+}
+@font-face {
+  font-family: LabGrotesque;
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/LabGrotesque-Black.woff2") format("woff2"),
+    url("/fonts/LabGrotesque-Black.woff") format("woff");
+}
+@font-face {
+  font-family: LabGrotesque;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/LabGrotesque-Bold.woff2") format("woff2"),
+    url("/fonts/LabGrotesque-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: LabGrotesque;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/LabGrotesque-Medium.woff2") format("woff2"),
+    url("/fonts/LabGrotesque-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: ProximaNova;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/ProximaNova-Bold.woff2") format("woff2"),
+    url("/fonts/ProximaNova-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: ProximaNova;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/ProximaNova-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: ProximaNova;
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("/fonts/ProximaNova-RegularItalic.woff") format("woff");
+}
+@font-face {
+  font-family: WiredMono;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/WiredMono-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: WiredMono;
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/WiredMono-Light.woff") format("woff");
+}
+@font-face {
+  font-family: WiredMono;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/WiredMono-Regular.woff2") format("woff2"),
+    url("/fonts/WiredMono-Regular.woff") format("woff");
+}

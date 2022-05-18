@@ -21,6 +21,12 @@ module.exports = {
       gap: {
         "home-left-area-gap": "2rem",
       },
+      border: {
+        "default-light-border-color": "#e5e5e5",
+      },
+      backgroundImage: {
+        "news-letter-bg": 'url("/news-letter-bg.jpg")',
+      },
     },
   },
   plugins: [],

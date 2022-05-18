@@ -24,7 +24,7 @@ export function SearchIcon({
       </title>
       <path
         d="M14.5 10a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm5.249 8.335l4.458 4.458-1.414 1.414-4.458-4.458a6.5 6.5 0 1 1 1.414-1.414z"
-        fill-rule="nonzero"
+        fillRule="nonzero"
         {...pathProps}
       ></path>
     </svg>

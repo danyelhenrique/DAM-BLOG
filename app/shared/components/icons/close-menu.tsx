@@ -23,7 +23,7 @@ export function CloseMenuIcon({
       <title className="sr-only">{screenReaderText}</title>
       <path
         d="M16 14.586l6.364-6.364 1.414 1.414L17.414 16l6.364 6.364-1.414 1.414L16 17.414l-6.364 6.364-1.414-1.414L14.586 16 8.222 9.636l1.414-1.414z"
-        fill-rule="nonzero"
+        fillRule="nonzero"
         {...pathProps}
       ></path>
     </svg>

@@ -23,7 +23,7 @@ export function BurguerMenuIcon({
 
       <path
         d="M8 10h16v2H8v-2zm0 5h16v2H8v-2zm0 5h16v2H8v-2z"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         className="fill-[#000000]"
         {...pathProps}
       ></path>

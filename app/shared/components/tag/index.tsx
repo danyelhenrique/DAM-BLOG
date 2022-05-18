@@ -7,7 +7,10 @@ import type {
 
 export function TagComponent({ children, ...rest }: TagComponentProps) {
   return (
-    <div className="flex text-sm leading-6 text-white uppercase" {...rest}>
+    <div
+      className={`flex text-sm uppercase leading-6 text-white ${rest.cl || ""}`}
+      {...rest}
+    >
       {children}
     </div>
   );
@@ -19,7 +22,11 @@ export function TagLinkComponent({
   ...rest
 }: TagLinkComponentProps) {
   return (
-    <a href={link} {...rest} className="flex items-center bg-black">
+    <a
+      href={link}
+      {...rest}
+      className={`flex items-center bg-black ${rest.cl || ""}`}
+    >
       {children}
     </a>
   );
@@ -31,7 +38,9 @@ export function TagHeadingComponent({
 }: TagHeadingComponentProps) {
   return (
     <h2
-      className="flex items-center bg-black p-[0.25rem_0.75rem] text-sm uppercase  leading-6 text-white"
+      className={`flex items-center bg-black p-[0.25rem_0.75rem] text-sm uppercase  leading-6 text-white ${
+        rest.cl || ""
+      }`}
       {...rest}
     >
       {children}
@@ -42,7 +51,9 @@ export function TagHeadingComponent({
 export function TagTextComponent({ children, ...rest }: TagTextComponentProps) {
   return (
     <span
-      className="flex items-center  p-[0.25rem_0.75rem] text-sm uppercase leading-6 text-white"
+      className={`flex items-center  p-[0.25rem_0.75rem] text-sm uppercase leading-6 text-white ${
+        rest.cl || ""
+      }`}
       {...rest}
     >
       {children}
