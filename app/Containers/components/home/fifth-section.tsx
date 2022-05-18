@@ -3,9 +3,9 @@ import { TagComponent } from "~/shared/components/tag";
 
 export function HomeFifthSection() {
   return (
-    <section className="grid grid-cols-3 gap-10 pt-10 mx-auto max-w-section-max px-section-padding ">
-      <CardComponent cl="block  pr-4">
-        <CardComponent.Tag cl="inline-block	">
+    <section className="mx-auto grid max-w-section-max grid-cols-3 gap-10 px-section-padding pt-10 ">
+      <CardComponent className="block  pr-4">
+        <CardComponent.Tag className="inline-block	">
           <CardComponent.TagText> </CardComponent.TagText>
           <TagComponent.Heading>Business</TagComponent.Heading>
         </CardComponent.Tag>

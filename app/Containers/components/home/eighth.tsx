@@ -4,14 +4,14 @@ import { TagSummartComponent } from "~/shared/components/tag/tag-sumary";
 
 export function HomeEighthSection() {
   return (
-    <section className="pt-10 mx-auto max-w-section-max px-section-padding">
-      <TagSummartComponent cl="col-start-1 col-end-10 row-start-1 row-end-2 ">
+    <section className="mx-auto max-w-section-max px-section-padding pt-10">
+      <TagSummartComponent className="col-start-1 col-end-10 row-start-1 row-end-2 ">
         <TagComponent>
           <TagComponent.Heading>CLIMATE</TagComponent.Heading>
         </TagComponent>
       </TagSummartComponent>
 
-      <CardComponent cl="grid grid-cols-[2fr_1fr] gap-8">
+      <CardComponent className="grid grid-cols-[2fr_1fr] gap-8">
         <CardComponent.PictureWrapper>
           <CardComponent.Image
             src="https://media.wired.com/photos/6279a496a4fb038463303e16/16:9/w_1600%2Cc_limit/3D-Print-GigaLab-Gear-GettyImages-1132021724.jpg"
@@ -35,7 +35,7 @@ export function HomeEighthSection() {
             <CardComponent.Author>Eric Ravenscraft</CardComponent.Author>
           </div>
 
-          <CardComponent.Description cl="mb-0">
+          <CardComponent.Description className="mb-0">
             With a facility the size of a small shipping container, Re:3D lets
             communities recycle their junk into useful products right on-site.
           </CardComponent.Description>

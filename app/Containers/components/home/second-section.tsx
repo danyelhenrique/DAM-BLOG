@@ -4,13 +4,13 @@ import { TagSummartComponent } from "~/shared/components/tag/tag-sumary";
 
 export function HomeSecondSection() {
   return (
-    <section className="block pt-10 mx-auto max-w-section-max px-section-padding">
-      <TagSummartComponent cl="col-start-1 col-end-10 row-start-1 row-end-2">
+    <section className="mx-auto block max-w-section-max px-section-padding pt-10">
+      <TagSummartComponent className="col-start-1 col-end-10 row-start-1 row-end-2">
         <TagComponent>
           <TagComponent.Text className="p-l-0">
             <div className="flex">
               <TagComponent.Heading>TRENDING STORIE</TagComponent.Heading>
-              <TagComponent.Heading className="pl-6 text-black bg-transparent">
+              <TagComponent.Heading className="bg-transparent pl-6 text-black">
                 TOP STORIES IN THE LAST 48 HOURS
               </TagComponent.Heading>
             </div>

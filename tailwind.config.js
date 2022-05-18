@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: ["./app/**/*.{ts,tsx,jsx,js}"],
   theme: {
@@ -26,6 +28,14 @@ module.exports = {
       },
       backgroundImage: {
         "news-letter-bg": 'url("/news-letter-bg.jpg")',
+      },
+      fontFamily: {
+        BrandonText: ["BrandonText", ...defaultTheme.fontFamily.sans],
+        Druk: ["Druk", ...defaultTheme.fontFamily.sans],
+        LabGrotesque: ["LabGrotesque", ...defaultTheme.fontFamily.sans],
+        ProximaNova: ["ProximaNova", ...defaultTheme.fontFamily.sans],
+        WiredMono: ["WiredMono", ...defaultTheme.fontFamily.mono],
+        BreveText: ["BreveText", ...defaultTheme.fontFamily.sans],
       },
     },
   },

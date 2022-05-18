@@ -12,9 +12,11 @@ import type {
   CardTitleComponentProps,
 } from "./card-types";
 
-export function CardComponent({ children, ...rest }: CardComponentProps) {
+export function CardComponent(props: CardComponentProps) {
+  const { children, className = "", ...rest } = props;
+
   return (
-    <div {...rest} className={`${rest.cl || ""}`}>
+    <div {...rest} className={`${className}`}>
       {React.Children.map(children, (child) =>
         React.cloneElement(child as any, { disabled: true })
       )}
@@ -25,34 +27,34 @@ export function CardComponent({ children, ...rest }: CardComponentProps) {
 export function CardPictureWrapperComponent(
   props: CardPictureWrapperComponentProps
 ) {
+  const { children, className = "", ...rest } = props;
+
   return (
     <div className="aspect-ratio--overlay-container">
       <picture
-        className={`responsive-image-picture responsive-image ${
-          props.cl || ""
-        }`}
-        {...props}
+        className={`responsive-image-picture responsive-image ${className}`}
+        {...rest}
       >
-        {props.children}
+        {children}
       </picture>
     </div>
   );
 }
 export function CardImageComponent(props: CardImageComponentProps) {
-  const { alt, src, cl, ...rest } = props;
+  const { alt, src, cl, className = "", ...rest } = props;
 
   return (
     <img
       alt={alt}
       src={src}
-      className={`responsive-image__image ${props.cl || ""}`}
+      className={`responsive-image__image ${className}`}
       {...rest}
     />
   );
 }
 
 export function CardImageSourceComponent(props: CardImagePictureProps) {
-  const { src, media, srcSet, sizes, ...rest } = props;
+  const { src, media, srcSet, sizes, className = "", ...rest } = props;
 
   return (
     <source
@@ -60,70 +62,79 @@ export function CardImageSourceComponent(props: CardImagePictureProps) {
       media={media}
       srcSet={srcSet}
       sizes={sizes}
-      className={`card-image-source ${props.cl || ""}`}
+      className={`card-image-source ${className}`}
       {...rest}
     />
   );
 }
 
 export function CardTagComponent(props: CardTagComponentProps) {
+  const { children, href, className = "", ...rest } = props;
+
   return (
-    <a href={props.href} {...props} className={`${props.cl || ""}`}>
+    <a href={href} className={`${className}`} {...rest}>
       {props.children}
     </a>
   );
 }
 
 export function CardTagTextComponent(props: CardTagTextComponentProps) {
+  const { children, className = "", ...rest } = props;
+
   return (
     <span
-      className={`card-tag text-xs uppercase text-black ${props.cl || ""}`}
-      {...props}
+      className={`card-tag text-xs uppercase text-black ${className}`}
+      {...rest}
     >
-      {props.children}
+      {children}
     </span>
   );
 }
 export function CardTitleComponent(props: CardTitleComponentProps) {
+  const { children, href, className = "", titleProps = {}, ...rest } = props;
+  const { className: titleClassName, ...titleRest } =
+    titleProps as React.HTMLAttributes<HTMLHeadingElement>;
+
   return (
     <a
-      className={`card-title-link ${props.cl || ""}`}
-      href={props.href}
-      {...props}
+      className={`card-title-link font-LabGrotesque	text-2xl font-black ${className}`}
+      href={href}
+      {...rest}
     >
-      <h2 className="cart-title">{props.children}</h2>
+      <h2 className={`cart-title ${titleClassName}`} {...titleRest}>
+        {children}
+      </h2>
     </a>
   );
 }
 
 export function CardAuthorComponent(props: CardAuthorComponentProps) {
-  const { children, ...rest } = props;
+  const { children, className = "", ...rest } = props;
 
   return (
-    <span className={`car-author-wrapper ${props.cl || ""}`} {...rest}>
+    <span
+      className={`car-author-wrapper font-WiredMono ${className}`}
+      {...rest}
+    >
       {children}
     </span>
   );
 }
 
 export function CardAuthorLinkComponent(props: CardAuthorLinkComponentProps) {
-  const { children, ...rest } = props;
+  const { children, className = "", ...rest } = props;
 
   return (
-    <a
-      href={rest.href}
-      className={`car-author-wrapper ${props.cl || ""}`}
-      {...rest}
-    >
+    <a href={rest.href} className={`car-author-wrapper ${className}`} {...rest}>
       {children}
     </a>
   );
 }
 
 export function CardDescriptionComponent(props: CardDescriptionComponentProps) {
-  console.log(props);
+  const { className = "", ...rest } = props;
   return (
-    <p className={`mb-2 block text-base ${props.cl || ""}`} {...props}>
+    <p className={`mb-2 block text-base ${className}`} {...rest}>
       {props.children}
     </p>
   );

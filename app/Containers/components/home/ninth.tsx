@@ -3,11 +3,11 @@ import { TagComponent } from "~/shared/components/tag";
 
 export function HomeNinthSection() {
   return (
-    <section className="grid grid-cols-4 gap-10 pt-10 mx-auto mt-10 border-t border-solid border-default-light-border-color max-w-section-max px-section-padding">
-      <CardComponent cl="grid grid-cols-[auto_87px] gap-8  border-r border-solid border-default-light-border-color pr-4">
+    <section className="border-default-light-border-color mx-auto mt-10 grid max-w-section-max grid-cols-4 gap-10 border-t border-solid px-section-padding pt-10">
+      <CardComponent className="border-default-light-border-color grid grid-cols-[auto_87px]  gap-8 border-r border-solid pr-4">
         <div className="">
           <TagComponent>
-            <TagComponent.Text className="text-black p-l-0">
+            <TagComponent.Text className="p-l-0 text-black">
               #SHEINHAUL
             </TagComponent.Text>
           </TagComponent>

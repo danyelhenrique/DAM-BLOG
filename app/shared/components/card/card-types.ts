@@ -37,7 +37,7 @@ export type CardTagComponentProps =
 export type CardTitleComponentProps =
   React.AnchorHTMLAttributes<HTMLAnchorElement> & {
     children?: React.ReactNode;
-    cl?: string;
+    titleProps?: React.HTMLAttributes<HTMLHeadingElement>;
   };
 
 export type CardAuthorComponentProps = React.HTMLAttributes<HTMLSpanElement> & {

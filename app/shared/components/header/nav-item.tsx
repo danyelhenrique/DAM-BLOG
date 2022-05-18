@@ -19,7 +19,7 @@ export function NavItem({ children }: { children?: React.ReactNode }) {
 
 export function NavLink({ href, text, ...rest }: NavLinkProps) {
   return (
-    <a className="block" href={href} {...rest}>
+    <a className="block text-xs uppercase font-WiredMono" href={href} {...rest}>
       {text}
     </a>
   );

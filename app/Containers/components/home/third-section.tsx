@@ -4,14 +4,14 @@ import { TagSummartComponent } from "~/shared/components/tag/tag-sumary";
 
 export function HomeThirdSection() {
   return (
-    <section className="pt-10 mx-auto max-w-section-max px-section-padding">
-      <TagSummartComponent cl="col-start-1 col-end-10 row-start-1 row-end-2 ">
+    <section className="mx-auto max-w-section-max px-section-padding pt-10">
+      <TagSummartComponent className="col-start-1 col-end-10 row-start-1 row-end-2 ">
         <TagComponent>
           <TagComponent.Heading>Longreads</TagComponent.Heading>
         </TagComponent>
       </TagSummartComponent>
 
-      <CardComponent cl="grid grid-cols-[2fr_1fr] gap-8">
+      <CardComponent className="grid grid-cols-[2fr_1fr] gap-8">
         <CardComponent.PictureWrapper>
           <CardComponent.Image
             src="https://media.wired.com/photos/627583874eacca8cb6d6f4ee/16:9/pass/Web3-JoystickRender_6_h.jpg"
@@ -35,7 +35,7 @@ export function HomeThirdSection() {
             <CardComponent.Author>Gilad Edelman</CardComponent.Author>
           </div>
 
-          <CardComponent.Description cl="mb-0">
+          <CardComponent.Description className="mb-0">
             The new movement wants to free us from Big Tech and exploitative
             capitalism—using only the blockchain, game theory, and code. What
             could possibly go wrong?

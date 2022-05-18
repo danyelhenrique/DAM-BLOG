@@ -5,13 +5,13 @@ import { TagSummartComponent } from "~/shared/components/tag/tag-sumary";
 export function HomeFirstSection() {
   return (
     <section className="mx-auto grid max-w-section-max grid-cols-[repeat(12,_1fr)] gap-10 px-section-padding pt-10">
-      <TagSummartComponent cl="col-start-1 col-end-10 row-start-1 row-end-2">
+      <TagSummartComponent className="col-start-1 col-end-10 row-start-1 row-end-2">
         <TagComponent>
           <TagComponent.Heading>TODA'S PICKS</TagComponent.Heading>
         </TagComponent>
       </TagSummartComponent>
 
-      <TagSummartComponent cl="col-start-10 col-end-[-1] row-start-1 row-end-2">
+      <TagSummartComponent className="col-start-10 col-end-[-1] row-start-1 row-end-2">
         <TagComponent>
           <TagComponent.Heading>MOST RECENT</TagComponent.Heading>
         </TagComponent>
@@ -36,7 +36,7 @@ export function HomeFirstSection() {
             <CardComponent.Title>
               Paradise at the Crypto Arcade: Inside the Web3 Revolution
             </CardComponent.Title>
-            <CardComponent.Description>
+            <CardComponent.Description className="text-sm font-BreveText">
               The new movement wants to free us from Big Tech and exploitative
               capitalism—using only the blockchain, game theory, and code. What
               could possibly go wrong?
@@ -60,7 +60,7 @@ export function HomeFirstSection() {
               <CardComponent.TagText>THE MONITOR </CardComponent.TagText>
             </CardComponent.Tag>
             <CardComponent.Title>
-              TikTok’s New, Terrible Trend
+              The Post-Roe Battleground for Abortion Pills Will Be Your Mailbox
             </CardComponent.Title>
             <CardComponent.Author>Angela Watercutter</CardComponent.Author>
           </CardComponent>
@@ -87,12 +87,14 @@ export function HomeFirstSection() {
         </div>
       </div>
       <div className="right-area summaray-list col-start-10 col-end-[-1] row-start-2">
-        <CardComponent cl="grid grid-cols-[auto_75px] gap-8 ">
+        <CardComponent className="grid grid-cols-[auto_75px] gap-8 ">
           <div className="">
-            <CardComponent.Title>
+            <CardComponent.Title titleProps={{ className: "text-lg" }}>
               The Best Vinyl Accessories to Jazz Up Your Analog Audio
             </CardComponent.Title>
-            <CardComponent.Author>PARKER HALL</CardComponent.Author>
+            <CardComponent.Author className="text-xs font-WiredMono ">
+              PARKER HALL
+            </CardComponent.Author>
           </div>
 
           <CardComponent.PictureWrapper>
@@ -107,12 +109,14 @@ export function HomeFirstSection() {
           </CardComponent.PictureWrapper>
         </CardComponent>
 
-        <CardComponent cl="grid grid-cols-[auto_75px] gap-8 ">
+        <CardComponent className="grid grid-cols-[auto_75px] gap-8 ">
           <div className="">
-            <CardComponent.Title>
+            <CardComponent.Title titleProps={{ className: "text-lg" }}>
               The Best Vinyl Accessories to Jazz Up Your Analog Audio
             </CardComponent.Title>
-            <CardComponent.Author>PARKER HALL</CardComponent.Author>
+            <CardComponent.Author className="text-xs font-WiredMono ">
+              PARKER HALL
+            </CardComponent.Author>
           </div>
 
           <CardComponent.PictureWrapper>
@@ -127,12 +131,14 @@ export function HomeFirstSection() {
           </CardComponent.PictureWrapper>
         </CardComponent>
 
-        <CardComponent cl="grid grid-cols-[auto_75px] gap-8 ">
+        <CardComponent className="grid grid-cols-[auto_75px] gap-8 ">
           <div className="">
-            <CardComponent.Title>
+            <CardComponent.Title titleProps={{ className: "text-lg" }}>
               The Best Vinyl Accessories to Jazz Up Your Analog Audio
             </CardComponent.Title>
-            <CardComponent.Author>PARKER HALL</CardComponent.Author>
+            <CardComponent.Author className="text-xs font-WiredMono ">
+              PARKER HALL
+            </CardComponent.Author>
           </div>
 
           <CardComponent.PictureWrapper>

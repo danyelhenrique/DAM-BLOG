@@ -5,6 +5,7 @@
   font-display: swap;
   src: url("/fonts/BrandonText-Bold.woff") format("woff");
 }
+
 @font-face {
   font-family: BreveText;
   font-weight: 700;

@@ -14,7 +14,6 @@ import {
 } from "@remix-run/react";
 import RootContainer from "./Containers/components/root";
 import { getUser } from "./session.server";
-import { useBrowserDetect } from "./shared/hooks/use-browser-detect";
 import fontsStylesheetUrl from "./styles/fonts.css";
 import tailwindStylesheetUrl from "./styles/tailwind.css";
 
@@ -44,8 +43,6 @@ export const loader: LoaderFunction = async ({ request }) => {
 };
 
 export default function App() {
-  const a = useBrowserDetect();
-  console.log("aaaaa", a);
   return (
     <html lang="en" className="h-full">
       <head>

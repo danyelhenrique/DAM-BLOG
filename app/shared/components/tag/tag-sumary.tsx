@@ -1,12 +1,13 @@
 import type { TagSummartComponentProps } from "./types";
 
 export function TagSummartComponent(props: TagSummartComponentProps) {
+  const { className = "", children, ...rest } = props;
   return (
     <div
-      className={`${props.cl} flex border-t-2 border-solid border-black`}
-      {...props}
+      className={`flex border-t-2 border-solid border-black ${className} `}
+      {...rest}
     >
-      {props.children}
+      {children}
     </div>
   );
 }
