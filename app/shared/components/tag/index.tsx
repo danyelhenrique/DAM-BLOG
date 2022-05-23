@@ -5,10 +5,14 @@ import type {
   TagTextComponentProps,
 } from "./types";
 
-export function TagComponent({ children, ...rest }: TagComponentProps) {
+export function TagComponent({ children, ...props }: TagComponentProps) {
+  const { className, ...rest } = props;
+
   return (
     <div
-      className={`flex text-sm uppercase leading-6 text-white ${rest.cl || ""}`}
+      className={`flex text-sm uppercase leading-6 text-white ${
+        className || ""
+      }`}
       {...rest}
     >
       {children}
@@ -19,13 +23,15 @@ export function TagComponent({ children, ...rest }: TagComponentProps) {
 export function TagLinkComponent({
   link,
   children,
-  ...rest
+  ...props
 }: TagLinkComponentProps) {
+  const { className, ...rest } = props;
+
   return (
     <a
       href={link}
       {...rest}
-      className={`flex items-center bg-black ${rest.cl || ""}`}
+      className={`flex items-center bg-black ${className || ""}`}
     >
       {children}
     </a>
@@ -34,12 +40,14 @@ export function TagLinkComponent({
 
 export function TagHeadingComponent({
   children,
-  ...rest
+  ...props
 }: TagHeadingComponentProps) {
+  const { className, ...rest } = props;
+
   return (
     <h2
-      className={`flex items-center bg-black p-[0.25rem_0.75rem] text-sm uppercase  leading-6 text-white ${
-        rest.cl || ""
+      className={`flex items-center bg-black p-[0.25rem_0.75rem] font-WiredMono text-sm  uppercase leading-6 text-white ${
+        className || ""
       }`}
       {...rest}
     >
@@ -48,11 +56,15 @@ export function TagHeadingComponent({
   );
 }
 
-export function TagTextComponent({ children, ...rest }: TagTextComponentProps) {
+export function TagTextComponent({
+  children,
+  ...props
+}: TagTextComponentProps) {
+  const { className, ...rest } = props;
   return (
     <span
       className={`flex items-center  p-[0.25rem_0.75rem] text-sm uppercase leading-6 text-white ${
-        rest.cl || ""
+        className || ""
       }`}
       {...rest}
     >

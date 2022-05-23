@@ -6,9 +6,14 @@ module.exports = {
     extend: {
       colors: {
         "border-header": "#e5e5e5",
+        "border-default": "#e5e5e5",
       },
       width: {
         "100%": "100%",
+      },
+      height: {
+        "100%": "100%",
+        "100vh": "100vh",
       },
       maxWidth: {
         "section-max": "100rem",
@@ -28,6 +33,9 @@ module.exports = {
       },
       backgroundImage: {
         "news-letter-bg": 'url("/news-letter-bg.jpg")',
+      },
+      lineHeight: {
+        "custom-line-height-md": "1.1875em",
       },
       fontFamily: {
         BrandonText: ["BrandonText", ...defaultTheme.fontFamily.sans],
