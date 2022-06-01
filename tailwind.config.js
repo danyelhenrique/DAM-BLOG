@@ -14,6 +14,7 @@ module.exports = {
       height: {
         "100%": "100%",
         "100vh": "100vh",
+        "border-height": "1px",
       },
       maxWidth: {
         "section-max": "100rem",

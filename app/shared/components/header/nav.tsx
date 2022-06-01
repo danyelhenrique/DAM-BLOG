@@ -15,7 +15,7 @@ export function Nav() {
       <ul className="flex max-h-[1.5rem] p-0">
         {links.map((l) => (
           <NavItem key={l.text}>
-            <NavItem.NavLink href={l.href} text={l.text} />
+            <NavItem.NavLink to={l.href} text={l.text} />
           </NavItem>
         ))}
       </ul>

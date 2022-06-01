@@ -17,9 +17,10 @@ export function CardComponent(props: CardComponentProps) {
 
   return (
     <div {...rest} className={`${className}`}>
-      {React.Children.map(children, (child) =>
+      {/* {React.Children.map(children, (child) =>
         React.cloneElement(child as any, { disabled: true })
-      )}
+      )} */}
+      {children}
     </div>
   );
 }
@@ -27,10 +28,20 @@ export function CardComponent(props: CardComponentProps) {
 export function CardPictureWrapperComponent(
   props: CardPictureWrapperComponentProps
 ) {
-  const { children, className = "", ...rest } = props;
+  const {
+    children,
+    className = "",
+    containerProps = { className: "" },
+    ...rest
+  } = props;
+  const { className: classNameContainer, ...restContainer } =
+    containerProps as React.HTMLAttributes<HTMLDivElement>;
 
   return (
-    <div className="aspect-ratio--overlay-container">
+    <div
+      className={`aspect-ratio--overlay-container ${classNameContainer}`}
+      {...restContainer}
+    >
       <picture
         className={`responsive-image-picture responsive-image ${className}`}
         {...rest}
@@ -134,7 +145,10 @@ export function CardAuthorLinkComponent(props: CardAuthorLinkComponentProps) {
 export function CardDescriptionComponent(props: CardDescriptionComponentProps) {
   const { className = "", ...rest } = props;
   return (
-    <p className={`mb-2 block text-base ${className}`} {...rest}>
+    <p
+      className={`mb-2 block text-base text-[#333333]  ${className}`}
+      {...rest}
+    >
       {props.children}
     </p>
   );

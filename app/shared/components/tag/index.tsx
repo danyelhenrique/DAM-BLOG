@@ -42,13 +42,11 @@ export function TagHeadingComponent({
   children,
   ...props
 }: TagHeadingComponentProps) {
-  const { className, ...rest } = props;
+  const { className = "", ...rest } = props;
 
   return (
     <h2
-      className={`flex items-center bg-black p-[0.25rem_0.75rem] font-WiredMono text-sm  uppercase leading-6 text-white ${
-        className || ""
-      }`}
+      className={`flex items-center bg-black p-[0.25rem_0.75rem] font-WiredMono text-sm  uppercase leading-6 text-white ${className}`}
       {...rest}
     >
       {children}

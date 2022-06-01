@@ -1,27 +1,37 @@
-type NavLinkProps = Omit<
-  React.DetailedHTMLProps<
-    React.AnchorHTMLAttributes<HTMLAnchorElement>,
-    HTMLAnchorElement
-  >,
-  "href"
-> & {
+import type { LinkProps } from "@remix-run/react";
+import { Link } from "@remix-run/react";
+
+type NavLinkProps = LinkProps & {
   text: string;
-  href: string;
 };
 
-export function NavItem({ children }: { children?: React.ReactNode }) {
+type NavItemProps = React.LiHTMLAttributes<HTMLLIElement> & {
+  children?: React.ReactNode;
+};
+
+export function NavItem(props: NavItemProps) {
+  const { children, className = "", ...rest } = props;
+
   return (
-    <li className="mr-[1em] flex h-[1.5rem] items-center justify-center">
+    <li
+      className={`mr-[1em] flex h-[1.5rem] items-center justify-center ${className}`}
+      {...rest}
+    >
       {children}
     </li>
   );
 }
 
-export function NavLink({ href, text, ...rest }: NavLinkProps) {
+export function NavLink(props: NavLinkProps) {
+  const { text, to, className = "", ...rest } = props;
   return (
-    <a className="block text-xs uppercase font-WiredMono" href={href} {...rest}>
+    <Link
+      className={`block font-WiredMono text-xs uppercase ${className}`}
+      to={to}
+      {...rest}
+    >
       {text}
-    </a>
+    </Link>
   );
 }
 

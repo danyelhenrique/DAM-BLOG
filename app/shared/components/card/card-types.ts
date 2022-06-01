@@ -13,7 +13,7 @@ export type CardComponentProps = React.HTMLAttributes<HTMLDivElement> & {
 export type CardPictureWrapperComponentProps =
   React.HTMLAttributes<HTMLElement> & {
     children: React.ReactNode;
-    cl?: string;
+    containerProps?: React.HTMLAttributes<HTMLDivElement>;
   };
 export type CardImageComponentProps =
   React.ImgHTMLAttributes<HTMLImageElement> & {

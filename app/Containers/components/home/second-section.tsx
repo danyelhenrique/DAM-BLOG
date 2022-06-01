@@ -59,7 +59,7 @@ export function HomeSecondSection() {
         </TagComponent>
       </TagSummartComponent>
 
-      <div className="grid grid-cols-4 gap-8 pt-4">
+      <div className="grid grid-cols-4 gap-8 pt-7">
         {mockTrendingTopics.map((topic) => (
           <CardComponent key={topic.id}>
             <CardComponent.PictureWrapper>
