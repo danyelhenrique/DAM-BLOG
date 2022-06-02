@@ -49,7 +49,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="h-full pb-[1000%]">
+      <body className="h-full">
         <RootContainer>
           <Outlet />
         </RootContainer>
