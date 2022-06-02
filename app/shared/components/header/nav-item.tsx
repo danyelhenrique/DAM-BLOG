@@ -26,7 +26,7 @@ export function NavLink(props: NavLinkProps) {
   const { text, to, className = "", ...rest } = props;
   return (
     <Link
-      className={`block font-WiredMono text-xs uppercase ${className}`}
+      className={`block font-WiredMono text-xs uppercase hover:underline ${className}`}
       to={to}
       {...rest}
     >

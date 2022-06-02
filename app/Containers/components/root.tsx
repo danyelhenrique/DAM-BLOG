@@ -12,8 +12,9 @@ export default function RootContainer({
       {ROOT_CONTEXT_PROVIDERS.map((Provider, i) => (
         <Provider key={i}>
           <HeaderComponent />
-          <main id="app-main">{children}</main>
-
+          <main id="app-main" className="mt-16 ">
+            {children}
+          </main>
           <FooterComponent />
         </Provider>
       ))}

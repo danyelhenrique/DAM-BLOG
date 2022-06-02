@@ -4,11 +4,9 @@ import { SearchIcon } from "../icons/search";
 import { BurguerMenu } from "./burguer-menu";
 import { Nav } from "./nav";
 
-
-
 export function HeaderComponent() {
   return (
-    <header className="grid h-[3.5rem]  grid-cols-[auto_auto_minmax(0px,_1fr)_auto_auto_auto] border-b-[1px] border-solid border-border-header bg-[#fff]">
+    <header className="fixed top-0 z-10 grid h-[3.5rem] w-100% grid-cols-[auto_auto_minmax(0px,_1fr)_auto_auto_auto] border-b-[1px] border-solid border-border-header bg-[#fff]">
       <div className="flex w-[3.5rem] items-center justify-center p-[0px_0.5rem]">
         <BurguerMenu />
       </div>
@@ -29,7 +27,7 @@ export function HeaderComponent() {
         <Link
           to="#void"
           rel="nofollow"
-          className="relative m-[0px_2rem_0px_0px]  flex h-[100%] items-center justify-center 
+          className="relative m-[0px_2rem_0px_0px] flex h-[100%] items-center  justify-center font-WiredMono text-xs text-black 
           after:absolute after:top-[16px] after:right-[-1rem] after:inline-block after:h-[20px] after:w-[2px] after:bg-[#e5e5e5]"
         >
           SIGN IN
