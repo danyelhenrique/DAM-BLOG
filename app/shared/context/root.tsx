@@ -1,4 +1,4 @@
-import { BurguerMenuProvider } from "./menu";
+import { HomeProvider } from "./home";
 
 /* Global Providers to shared across the app */
-export const ROOT_CONTEXT_PROVIDERS = [BurguerMenuProvider];
+export const ROOT_CONTEXT_PROVIDERS = [HomeProvider];

@@ -11,7 +11,7 @@ const links = [
 ];
 export function Nav() {
   return (
-    <nav className="block">
+    <nav className="hidden lg:block">
       <ul className="flex max-h-[1.5rem] p-0">
         {links.map((l) => (
           <NavItem key={l.text}>

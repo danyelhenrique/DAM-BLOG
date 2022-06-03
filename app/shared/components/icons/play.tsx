@@ -32,7 +32,7 @@ export function PlayIcon({
         </title>
         <path
           d="M11 8l14 8-14 8z"
-          fill-rule="evenodd"
+          fillRule="evenodd"
           {...pathProps}
           className={`${pathClassName}`}
         ></path>

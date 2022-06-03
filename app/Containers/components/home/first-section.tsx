@@ -1,3 +1,4 @@
+import { Link, useLoaderData } from "@remix-run/react";
 import { CardComponent } from "~/shared/components/card";
 import { TagComponent } from "~/shared/components/tag";
 import { TagSummartComponent } from "~/shared/components/tag/tag-sumary";
@@ -35,51 +36,36 @@ const mockDataMostRecent = [
   },
 ];
 
-const mockTodayPick = [
-  {
-    id: 1,
-    title: "The Incredible Shrinking Car Dealership",
-    author: "By David S. Miller",
-    image: `https://media.wired.com/photos/628431090c454f12d5142777/16:9/pass/New-Honda-Facility-Design-Business.jpg`,
-  },
-  {
-    id: 2,
-    title: "A Letter to My Fellow Asian Mothers From the Multiverse",
-    author: "ADRIENNE SO",
-    image: `https://media.wired.com/photos/628436e4bdc4ad545af73cf9/16:9/pass/A-Letter-To-My-Fellow-Asian-Mothers-Multiverse-EEAAO-Culture.jpg`,
-  },
-];
-
-const mockFeature = {
-  id: 1,
-  title: "This Hacktivist Site Lets You Prank Call Russian Officials",
-  summary:
-    "To protest the war in Ukraine, WasteRussianTime.fun auto-dials Russian government officials, connects them, and lets you listen in to their confusion.",
-  author: "ANDY GREENBERG",
-  image: `https://media.wired.com/photos/627efe5b83768a9d8a5c8f7e/16:9/pass/Russian-Robocalls-Security-GettyImages-824257794.jpg`,
-};
-
 export function HomeFirstSection() {
+  const state = useLoaderData();
+
   return (
-    <section className="mx-auto grid max-w-section-max grid-cols-[repeat(12,_1fr)] gap-x-10 gap-y-5  px-section-padding pt-10">
+    <section
+      className="mx-auto grid  grid-cols-1 lg:max-w-section-max lg:grid-cols-[repeat(12,_1fr)] lg:gap-x-10  lg:gap-y-5 lg:px-section-padding
+      lg:pt-10 
+    "
+    >
       <TagSummartComponent
-        className="relative col-start-1 col-end-10 row-start-1 row-end-2 
-              before:absolute
-              before:top-0
-              before:right-[-22px]
-              before:block
-              before:h-100vh
-              before:w-[1px]
-              before:bg-border-default"
+        className="relative row-start-1 row-end-2 !border-0 lg:col-start-1 
+              lg:col-end-10
+              lg:!border-t-2
+              before:lg:absolute
+              before:lg:top-0
+              before:lg:right-[-22px]
+              before:lg:block
+              before:lg:h-100vh
+              before:lg:w-[1px]
+              before:lg:bg-border-default
+              "
       >
-        <TagComponent>
-          <TagComponent.Heading className="text-sm font-WiredMono ">
+        <TagComponent className="block w-100%">
+          <TagComponent.Heading className="flex w-100% justify-center text-center font-WiredMono lg:block lg:w-auto">
             TODAY'S PICKS
           </TagComponent.Heading>
         </TagComponent>
       </TagSummartComponent>
 
-      <TagSummartComponent className="col-start-10 col-end-[-1] row-start-1 row-end-2">
+      <TagSummartComponent className="col-start-1 col-end-[-1] row-start-3 row-end-4 lg:col-start-10 lg:col-end-[-1] lg:row-start-1 lg:row-end-2">
         <TagComponent>
           <TagComponent.Heading className="text-sm font-WiredMono ">
             MOST RECENT
@@ -87,9 +73,9 @@ export function HomeFirstSection() {
         </TagComponent>
       </TagSummartComponent>
 
-      <div className="left-area col-start-1 col-end-10 row-start-2 grid max-w-home-left-max grid-cols-[repeat(9,_1fr)_1px] grid-rows-home-first-section-left gap-home-left-area-gap ">
+      <div className="left-area cols-end-[-1] col-start-1 row-start-2 row-end-3 grid max-w-home-left-max grid-cols-1 grid-rows-home-first-section-left gap-home-left-area-gap lg:col-start-1 lg:col-end-10 lg:row-start-2 lg:grid-cols-[repeat(9,_1fr)_1px] ">
         <div className="col-span-3 col-start-1 col-end-4 row-start-1 summaray-list">
-          {mockTodayPick.map((topic, index) => (
+          {state?.todaysPosts?.map((topic: any, index: number) => (
             <CardComponent
               key={topic.id}
               className={`mb-4 block pb-4 ${
@@ -98,22 +84,22 @@ export function HomeFirstSection() {
                   : ""
               }`}
             >
-              <CardComponent.PictureWrapper>
+              <CardComponent.PictureWrapper className="">
                 <CardComponent.Image
-                  src={topic.image}
-                  alt="Banner"
+                  src={topic.feature_image}
+                  alt={topic.feature_image_alt || "Banner"}
                 ></CardComponent.Image>
                 <CardComponent.ImageSource
-                  srcSet={topic.image}
+                  srcSet={topic.feature_image}
                   media="(max-width: 767px)"
                 />
               </CardComponent.PictureWrapper>
               <CardComponent.Tag className="block mt-3">
                 <CardComponent.TagText className="THE MONITOR font-WiredMono">
-                  THE MONITOR
+                  {topic.primary_tag.name}
                 </CardComponent.TagText>
               </CardComponent.Tag>
-              <CardComponent.Title>{topic.title}</CardComponent.Title>
+              <CardComponent.Title to="">{topic.title}</CardComponent.Title>
               <CardComponent.Author className="block mt-2 text-xs uppercase">
                 {topic.author}
               </CardComponent.Author>
@@ -123,41 +109,46 @@ export function HomeFirstSection() {
 
         <div className="hero collapse-hero col-start-4 col-end-[-1]  pr-2 ">
           <CardComponent>
-            <CardComponent.PictureWrapper>
-              <CardComponent.Image
-                src={mockFeature.image}
-                alt="Banner"
-              ></CardComponent.Image>
-              <CardComponent.ImageSource
-                srcSet={mockFeature.image}
-                media="(max-width: 767px)"
-              />
-            </CardComponent.PictureWrapper>
+            <Link to={`/posts/${state?.highlightPost?.slug}`}>
+              <CardComponent.PictureWrapper>
+                <CardComponent.Image
+                  src={state?.highlightPost?.feature_image}
+                  alt="Banner"
+                ></CardComponent.Image>
+                <CardComponent.ImageSource
+                  srcSet={state?.highlightPost?.feature_image}
+                  media="(max-width: 767px)"
+                />
+              </CardComponent.PictureWrapper>
+            </Link>
 
             <CardComponent.Tag className="block mt-3">
               <CardComponent.TagText className="THE MONITOR font-WiredMono">
-                just dao it
+                {state?.highlightPost?.tag?.name}
               </CardComponent.TagText>
             </CardComponent.Tag>
-
             <CardComponent.Title
+              to={`/posts/${state?.highlightPost?.slug}`}
               titleProps={{
-                className: "text-6xl	font-Druk",
+                className: "text-6xl	font-Druk hover:underline",
               }}
             >
-              {mockFeature.title}
+              {state?.highlightPost?.title}
             </CardComponent.Title>
-            <CardComponent.Description className="my-3 text-base font-BreveText">
-              {mockFeature.summary}
-            </CardComponent.Description>
+            <Link to={`/posts/${state?.highlightPost?.slug}`}>
+              <CardComponent.Description className="my-3 text-base font-BreveText">
+                {state?.highlightPost?.excerpt}
+              </CardComponent.Description>
+            </Link>
+
             <CardComponent.Author className="text-xs uppercase">
-              {mockFeature.author}
+              {state?.highlightPost?.primary_author?.name}
             </CardComponent.Author>
           </CardComponent>
         </div>
       </div>
 
-      <div className="right-area summaray-list col-start-10 col-end-[-1] row-start-2">
+      <div className="right-area summaray-list row-start-4 row-end-5 lg:col-start-10 lg:col-end-[-1] lg:row-start-2">
         {mockDataMostRecent.map((topic, index) => (
           <CardComponent
             key={topic.id}
@@ -167,6 +158,7 @@ export function HomeFirstSection() {
           >
             <div className="">
               <CardComponent.Title
+                to="#"
                 titleProps={{ className: "text-lg  leading-7" }}
               >
                 {topic.title}
@@ -176,7 +168,7 @@ export function HomeFirstSection() {
               </CardComponent.Author>
             </div>
 
-            <CardComponent.PictureWrapper>
+            <CardComponent.PictureWrapper className="hidden md:block">
               <CardComponent.Image
                 src={topic.image}
                 alt="Banner"

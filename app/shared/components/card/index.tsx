@@ -1,3 +1,4 @@
+import { Link } from "@remix-run/react";
 import React from "react";
 import type {
   CardAuthorComponentProps,
@@ -102,20 +103,26 @@ export function CardTagTextComponent(props: CardTagTextComponentProps) {
   );
 }
 export function CardTitleComponent(props: CardTitleComponentProps) {
-  const { children, href, className = "", titleProps = {}, ...rest } = props;
+  const {
+    children,
+    to = "#void",
+    className = "",
+    titleProps = {},
+    ...rest
+  } = props;
   const { className: titleClassName, ...titleRest } =
     titleProps as React.HTMLAttributes<HTMLHeadingElement>;
 
   return (
-    <a
+    <Link
       className={`card-title-link font-LabGrotesque	text-2xl font-black ${className}`}
-      href={href}
+      to={to}
       {...rest}
     >
       <h2 className={`cart-title ${titleClassName}`} {...titleRest}>
         {children}
       </h2>
-    </a>
+    </Link>
   );
 }
 

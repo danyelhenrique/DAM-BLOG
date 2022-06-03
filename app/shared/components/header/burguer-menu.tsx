@@ -1,5 +1,5 @@
-import { classNames } from "~/shared/helpers/classNames";
 import { useMenu } from "~/shared/hooks/user-menu";
+import { classNames } from "~/shared/utils/classNames";
 import { BurguerMenuIcon } from "../icons/burguer-menu";
 import { CloseMenuIcon } from "../icons/close-menu";
 

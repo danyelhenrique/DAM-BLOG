@@ -10,7 +10,7 @@ export function TagComponent({ children, ...props }: TagComponentProps) {
 
   return (
     <div
-      className={`flex text-sm uppercase leading-6 text-white ${
+      className={`block  text-sm uppercase leading-6 text-white md:flex ${
         className || ""
       }`}
       {...rest}
@@ -46,7 +46,7 @@ export function TagHeadingComponent({
 
   return (
     <h2
-      className={`flex items-center bg-black p-[0.25rem_0.75rem] font-WiredMono text-sm  uppercase leading-6 text-white ${className}`}
+      className={`block items-center bg-black p-[0.25rem_0.75rem] text-center font-WiredMono text-sm uppercase  leading-6 text-white md:flex ${className}`}
       {...rest}
     >
       {children}

@@ -1,6 +1,7 @@
 import { FooterComponent } from "~/shared/components/footer";
 import { HeaderComponent } from "~/shared/components/header";
-import { ROOT_CONTEXT_PROVIDERS } from "~/shared/context/root";
+import { HomeProvider } from "~/shared/context/home";
+import { BurguerMenuProvider } from "~/shared/context/menu";
 
 export default function RootContainer({
   children,
@@ -9,15 +10,15 @@ export default function RootContainer({
 }) {
   return (
     <>
-      {ROOT_CONTEXT_PROVIDERS.map((Provider, i) => (
-        <Provider key={i}>
+      <BurguerMenuProvider>
+        <HomeProvider>
           <HeaderComponent />
           <main id="app-main" className="mt-16 ">
             {children}
           </main>
           <FooterComponent />
-        </Provider>
-      ))}
+        </HomeProvider>
+      </BurguerMenuProvider>
     </>
   );
 }

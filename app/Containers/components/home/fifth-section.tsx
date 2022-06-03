@@ -54,7 +54,7 @@ const mock = [
 
 export function HomeFifthSection() {
   return (
-    <section className="grid grid-cols-3 pt-10 mx-auto max-w-section-max gap-y-0 gap-x-10 px-section-padding ">
+    <section className="flex flex-col grid-cols-3 pt-10 mx-auto max-w-section-max gap-y-0 gap-x-10 px-section-padding md:grid">
       {mock.map(({ title, ...summary }, index) => (
         <CardComponent key={summary.id} className="block pr-4 ">
           {index <= 2 && (

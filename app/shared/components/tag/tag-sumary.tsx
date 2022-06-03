@@ -4,7 +4,7 @@ export function TagSummartComponent(props: TagSummartComponentProps) {
   const { className = "", children, ...rest } = props;
   return (
     <div
-      className={`flex border-t-2 border-solid border-black ${className} `}
+      className={`block border-t-2 border-solid border-black md:flex ${className} `}
       {...rest}
     >
       {children}

@@ -1,3 +1,5 @@
+import type { RemixLinkProps } from "@remix-run/react/components";
+
 export type CardImagePictureProps =
   React.SourceHTMLAttributes<HTMLSourceElement> & {
     srcSet: string;
@@ -34,11 +36,12 @@ export type CardTagComponentProps =
     cl?: string;
   };
 
-export type CardTitleComponentProps =
-  React.AnchorHTMLAttributes<HTMLAnchorElement> & {
-    children?: React.ReactNode;
-    titleProps?: React.HTMLAttributes<HTMLHeadingElement>;
-  };
+export type CardTitleComponentProps = RemixLinkProps & {
+  className?: string;
+  children?: React.ReactNode;
+  to?: string;
+  titleProps?: React.HTMLAttributes<HTMLHeadingElement>;
+};
 
 export type CardAuthorComponentProps = React.HTMLAttributes<HTMLSpanElement> & {
   children?: React.ReactNode;
