@@ -34,20 +34,20 @@ export function HomeSeventhSection() {
       <div className="divider mx-auto mt-10 block w-100% max-w-section-max px-section-padding">
         <div className="h-border-height bg-border-default px-section-padding"></div>
       </div>
-      <section className="grid grid-cols-4 gap-10 pt-5 mx-auto max-w-section-max px-section-padding">
+      <section className="flex flex-col grid-cols-4 gap-10 pt-5 mx-auto max-w-section-max px-section-padding md:grid">
         {mock.map((summary, index) => (
           <CardComponent
             key={summary.id}
             className={`${
               index < 3
-                ? "border-default-light-border-color border-r border-solid"
+                ? "border-default-light-border-color border-0 border-solid md:border-r"
                 : ""
             } grid grid-cols-[auto_87px] gap-8   pr-4`}
           >
             <div className="">
               <CardComponent.Tag className="block mt-3 mb-1">
                 <CardComponent.TagText className="text-xs leading-4 font-WiredMono">
-                  #SHEINHAUL
+                  #SHEINHAUL 2
                 </CardComponent.TagText>
               </CardComponent.Tag>
 

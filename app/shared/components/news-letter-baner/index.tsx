@@ -1,7 +1,7 @@
 export function NewsletterBanner() {
   return (
-    <div className="news-letter-banner-wrapper flex h-[600px] items-center justify-center bg-news-letter-bg bg-cover">
-      <div className="grid w-100% max-w-[930px] grid-cols-2	bg-white pb-4">
+    <div className="news-letter-banner-wrapper flex h-[600px] items-center justify-center bg-news-letter-bg bg-cover p-6 md:p-0">
+      <div className="block  w-100% max-w-[930px] grid-cols-2 items-center justify-center bg-white	px-4 pb-4 md:grid md:px-0">
         <div className="news-left-area m-[3.5rem_1rem_4rem_2rem]">
           <svg
             className="icon icon-newsletter icon-newsletter-arrow"
@@ -41,7 +41,7 @@ export function NewsletterBanner() {
         <div className="news-right-area	m-[3.5rem_1.9rem_4rem_1rem] self-center">
           <div>
             <form name="homepage_newsletter" className="2.5rem mt-10">
-              <div className="grid grid-cols-[1fr_auto] items-center">
+              <div className="block items-center md:grid md:grid-cols-[1fr_auto]">
                 <label>
                   <span className="relative z-10 float-left mb-[-0.5rem]	 ml-[0.5rem] bg-white p-[0px_0.5rem] font-ProximaNova text-xs text-[#757575]">
                     Your Email
@@ -58,7 +58,7 @@ export function NewsletterBanner() {
 
                 <button
                   type="submit"
-                  className="relative mb-[-0.5rem] ml-3 flex h-[48px] min-w-[100px] items-center justify-center bg-[#757575]"
+                  className="relative mt-3 mb-[-0.5rem] block h-[48px] w-100% min-w-[100px] items-center justify-center bg-[#757575] md:mt-0 md:ml-3 md:flex md:w-auto"
                 >
                   <span className="text-xs text-white uppercase font-WiredMono ">
                     submit

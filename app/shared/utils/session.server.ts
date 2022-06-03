@@ -10,7 +10,20 @@ async function getTodaysPost() {
 }
 
 async function getRecentPosts() {
-  return GhostApiBrowse({ filter: "tags:[recent]", limit: 5 });
+  const todayDate = new Date();
+  const dateStr = `${todayDate.getFullYear()}-${String(
+    Number(todayDate.getDay())
+  ).padStart(2, "0")}-${String(todayDate.getMonth()).padStart(
+    2,
+    "0"
+  )} 00:00:00`;
+  return GhostApiBrowse({
+    filter: `tag:-highlight+tag:-Today+published_at:>'${dateStr}'`,
+    //filter: `published_at:>'2017-06-03 23:43:12'`,
+    limit: 5,
+    // @ts-ignore
+    include: "published_at",
+  });
 }
 
 async function getTrending() {

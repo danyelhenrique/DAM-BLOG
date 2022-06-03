@@ -19,8 +19,8 @@ import tailwindStylesheetUrl from "./styles/tailwind.css";
 
 export const links: LinksFunction = () => {
   return [
-    { rel: "preload", href: fontsStylesheetUrl },
-    { rel: "preload", href: tailwindStylesheetUrl },
+    { rel: "preload", href: fontsStylesheetUrl, as: "style" },
+    { rel: "preload", href: tailwindStylesheetUrl, as: "style" },
     { rel: "stylesheet", href: fontsStylesheetUrl },
     { rel: "stylesheet", href: tailwindStylesheetUrl },
   ];
@@ -28,7 +28,7 @@ export const links: LinksFunction = () => {
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "Remix Notes",
+  title: "Damn",
   viewport: "width=device-width,initial-scale=1",
 });
 

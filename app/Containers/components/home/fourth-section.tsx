@@ -47,7 +47,7 @@ export function HomeFourthSection() {
             <div className="">
               <CardComponent.Tag className="block mt-3 mb-1">
                 <CardComponent.TagText className="text-xs leading-4 font-WiredMono">
-                  #SHEINHAUL
+                  #SHEINHAUL 1
                 </CardComponent.TagText>
               </CardComponent.Tag>
 

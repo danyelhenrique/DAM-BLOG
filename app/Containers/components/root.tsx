@@ -13,7 +13,7 @@ export default function RootContainer({
       <BurguerMenuProvider>
         <HomeProvider>
           <HeaderComponent />
-          <main id="app-main" className="mt-16 ">
+          <main id="app-main" className="px-6 mt-16 lg:px-0">
             {children}
           </main>
           <FooterComponent />

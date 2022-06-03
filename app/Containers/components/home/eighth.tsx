@@ -7,11 +7,11 @@ export function HomeEighthSection() {
     <section className="pt-10 mx-auto max-w-section-max px-section-padding">
       <TagSummartComponent className="col-start-1 col-end-10 row-start-1 row-end-2 ">
         <TagComponent>
-          <TagComponent.Heading>Longreads</TagComponent.Heading>
+          <TagComponent.Heading>Longreads 3</TagComponent.Heading>
         </TagComponent>
       </TagSummartComponent>
 
-      <CardComponent className="grid grid-cols-[2fr_1fr] gap-8 pt-7">
+      <CardComponent className="flex grid-cols-[2fr_1fr] flex-col gap-8 pt-7 md:grid">
         <CardComponent.PictureWrapper>
           <CardComponent.Image
             src="https://media.wired.com/photos/628d23a04e3478c5befe4c6a/16:9/w_1600%2Cc_limit/hongKong.jpg"
@@ -31,6 +31,7 @@ export function HomeEighthSection() {
               </CardComponent.TagText>
             </CardComponent.Tag>
             <CardComponent.Title
+              to=""
               titleProps={{
                 className: "text-5xl font-Druk uppercase tracking-[.03em]",
               }}

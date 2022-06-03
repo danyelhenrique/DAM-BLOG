@@ -47,7 +47,7 @@ const mockTrendingTopics = [
 
 export function HomeSecondSection() {
   return (
-    <section className="block pt-10 mx-auto max-w-section-max px-section-padding">
+    <section className="block pt-10 mx-auto max-w-section-max lg:px-section-padding">
       <TagSummartComponent className="col-start-1 col-end-10 row-start-1 row-end-2">
         <TagComponent className="flex w-100% justify-center lg:block lg:w-auto">
           <div className="block w-100% md:w-auto lg:flex">

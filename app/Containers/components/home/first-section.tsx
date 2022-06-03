@@ -39,10 +39,13 @@ const mockDataMostRecent = [
 export function HomeFirstSection() {
   const state = useLoaderData();
 
+  console.log(state.recentPosts);
   return (
     <section
-      className="mx-auto grid  grid-cols-1 lg:max-w-section-max lg:grid-cols-[repeat(12,_1fr)] lg:gap-x-10  lg:gap-y-5 lg:px-section-padding
-      lg:pt-10 
+      className="mx-auto grid  grid-cols-1  lg:max-w-section-max  lg:grid-cols-[repeat(12,_1fr)] lg:gap-x-10
+      lg:gap-y-5 
+      lg:px-section-padding
+      lg:pt-10
     "
     >
       <TagSummartComponent
@@ -73,7 +76,7 @@ export function HomeFirstSection() {
         </TagComponent>
       </TagSummartComponent>
 
-      <div className="left-area cols-end-[-1] col-start-1 row-start-2 row-end-3 grid max-w-home-left-max grid-cols-1 grid-rows-home-first-section-left gap-home-left-area-gap lg:col-start-1 lg:col-end-10 lg:row-start-2 lg:grid-cols-[repeat(9,_1fr)_1px] ">
+      <div className="left-area cols-end-[-1] col-start-1 row-start-2 row-end-3 grid max-w-home-left-max grid-cols-1 grid-rows-home-first-section-left lg:col-start-1 lg:col-end-10 lg:row-start-2 lg:grid-cols-[repeat(9,_1fr)_1px] lg:gap-home-left-area-gap ">
         <div className="col-span-3 col-start-1 col-end-4 row-start-1 summaray-list">
           {state?.todaysPosts?.map((topic: any, index: number) => (
             <CardComponent
@@ -149,7 +152,7 @@ export function HomeFirstSection() {
       </div>
 
       <div className="right-area summaray-list row-start-4 row-end-5 lg:col-start-10 lg:col-end-[-1] lg:row-start-2">
-        {mockDataMostRecent.map((topic, index) => (
+        {state.recentPosts.map((topic: any, index: number | string) => (
           <CardComponent
             key={topic.id}
             className={`grid grid-cols-[auto_75px] gap-8 border-b border-solid border-border-default pb-5 pt-5 ${
@@ -164,17 +167,17 @@ export function HomeFirstSection() {
                 {topic.title}
               </CardComponent.Title>
               <CardComponent.Author className="block mt-1 text-xs font-WiredMono">
-                {topic.author}
+                {topic.primary_author?.name}
               </CardComponent.Author>
             </div>
 
             <CardComponent.PictureWrapper className="hidden md:block">
               <CardComponent.Image
-                src={topic.image}
+                src={topic?.feature_image}
                 alt="Banner"
               ></CardComponent.Image>
               <CardComponent.ImageSource
-                srcSet={topic.image}
+                srcSet={topic?.feature_image}
                 media="(max-width: 767px)"
               />
             </CardComponent.PictureWrapper>

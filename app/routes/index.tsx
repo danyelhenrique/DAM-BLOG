@@ -15,6 +15,12 @@ type LoaderData = {
   highlightPost: any;
 };
 
+export function headers() {
+  return {
+    "Cache-Control": "max-age=300, s-maxage=3600",
+  };
+}
+
 export const loader: LoaderFunction = async () => {
   const [highlightPosts, todaysPosts, recentPosts] = await Promise.all([
     getHighlightPosts(),

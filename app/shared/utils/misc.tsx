@@ -147,6 +147,10 @@ function useDebounce<Callback extends (...args: Array<unknown>) => unknown>(
   );
 }
 
+function excludeInternatTags(tags: Array<string>) {
+  return tags.filter((tag) => !tag.startsWith("@"));
+}
+
 export {
   getRequiredGlobalEnvVar,
   getRequiredServerEnvVar,
@@ -159,5 +163,6 @@ export {
   getDomainUrl,
   getUrl,
   removeTrailingSlash,
+  excludeInternatTags,
   AnchorOrLink,
 };

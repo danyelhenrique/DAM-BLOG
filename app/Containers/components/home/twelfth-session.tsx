@@ -38,7 +38,7 @@ const mockTrendingTopics = [
 
 export function TwelfthSession() {
   return (
-    <section className="block pt-10 mx-auto max-w-section-max px-section-padding">
+    <section className="block pt-10 mx-auto max-w-section-max lg:px-section-padding">
       <TagSummartComponent className="col-start-1 col-end-10 row-start-1 row-end-2">
         <TagComponent>
           <div className="flex">
