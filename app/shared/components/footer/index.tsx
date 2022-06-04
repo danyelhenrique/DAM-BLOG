@@ -67,9 +67,9 @@ const data = [
 export function FooterComponent() {
   return (
     <footer className="mt-3 block w-100% bg-black">
-      <div className="mx-auto grid	 max-w-section-max grid-cols-[minmax(auto,_720px)_auto_auto] grid-rows-2 px-section-padding pt-12">
+      <div className="mx-auto grid	 max-w-section-max grid-cols-[minmax(auto,_720px)_auto_auto] grid-rows-2 pt-12 lg:px-section-padding">
         <div className="flex flex-col ">
-          <div className="mr-auto footer-logo">
+          <div className="footer-logo mr-auto">
             <Link
               to="/"
               className="m-auto mr-[20px] flex min-w-[7.5rem] max-w-[12.5rem] items-center justify-center overflow-hidden"
@@ -118,36 +118,36 @@ export function FooterComponent() {
           ))}
         </Fragment>
 
-        <div className="flex pt-10 pb-12 shared-icons">
-          <Link to="#void" className="flex w-12 h-12">
+        <div className="shared-icons flex pt-10 pb-12">
+          <Link to="#void" className="flex h-12 w-12">
             <TwitterIcon
               svgProps={{
                 className: "w-100% h-100% block",
               }}
             />
           </Link>
-          <Link to="#void" className="flex w-12 h-12">
+          <Link to="#void" className="flex h-12 w-12">
             <PinterestIcon
               svgProps={{
                 className: "w-100% h-100% block",
               }}
             />
           </Link>
-          <Link to="#void" className="flex w-12 h-12">
+          <Link to="#void" className="flex h-12 w-12">
             <YouTubeIcon
               svgProps={{
                 className: "w-100% h-100% block",
               }}
             />
           </Link>
-          <Link to="#void" className="flex w-12 h-12">
+          <Link to="#void" className="flex h-12 w-12">
             <PinterestIcon
               svgProps={{
                 className: "w-100% h-100% block",
               }}
             />
           </Link>
-          <Link to="#void" className="flex w-12 h-12">
+          <Link to="#void" className="flex h-12 w-12">
             <TiktokIcon
               svgProps={{
                 className: "w-100% h-100% block",

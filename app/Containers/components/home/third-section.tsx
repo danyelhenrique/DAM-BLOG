@@ -4,7 +4,7 @@ import { TagSummartComponent } from "~/shared/components/tag/tag-sumary";
 
 export function HomeThirdSection() {
   return (
-    <section className="pt-10 mx-auto max-w-section-max px-section-padding">
+    <section className="mx-auto max-w-section-max pt-10 lg:px-section-padding">
       <TagSummartComponent className="col-start-1 col-end-10 row-start-1 row-end-2 ">
         <TagComponent>
           <TagComponent.Heading>Longreads</TagComponent.Heading>
@@ -25,7 +25,7 @@ export function HomeThirdSection() {
 
         <div className="flex flex-col justify-between ">
           <div>
-            <CardComponent.Tag className="block mt-3 mb-1">
+            <CardComponent.Tag className="mt-3 mb-1 block">
               <CardComponent.TagText className="THE MONITOR font-WiredMono ">
                 THINGS THEY CARRIED
               </CardComponent.TagText>

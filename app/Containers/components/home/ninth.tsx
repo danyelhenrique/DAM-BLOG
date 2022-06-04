@@ -31,10 +31,10 @@ const mock = [
 export function HomeNinthSection() {
   return (
     <Fragment>
-      <div className="divider mx-auto mt-10 block w-100% max-w-section-max px-section-padding">
-        <div className="h-border-height bg-border-default px-section-padding"></div>
+      <div className="divider mx-auto mt-10 block w-100% max-w-section-max lg:px-section-padding">
+        <div className="h-border-height bg-border-default lg:px-section-padding"></div>
       </div>
-      <section className="flex flex-col grid-cols-4 gap-10 pt-5 mx-auto max-w-section-max px-section-padding md:grid">
+      <section className="mx-auto flex max-w-section-max grid-cols-4 flex-col gap-10 pt-5 md:grid lg:px-section-padding">
         {mock.map((summary, index) => (
           <CardComponent
             key={summary.id}
@@ -45,8 +45,8 @@ export function HomeNinthSection() {
             } grid grid-cols-[auto_87px] gap-8   pr-4`}
           >
             <div className="">
-              <CardComponent.Tag className="block mt-3 mb-1">
-                <CardComponent.TagText className="text-xs leading-4 font-WiredMono">
+              <CardComponent.Tag className="mt-3 mb-1 block">
+                <CardComponent.TagText className="font-WiredMono text-xs leading-4">
                   #SHEINHAUL 3
                 </CardComponent.TagText>
               </CardComponent.Tag>

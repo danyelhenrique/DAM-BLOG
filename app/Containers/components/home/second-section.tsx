@@ -47,7 +47,7 @@ const mockTrendingTopics = [
 
 export function HomeSecondSection() {
   return (
-    <section className="block pt-10 mx-auto max-w-section-max lg:px-section-padding">
+    <section className="mx-auto block max-w-section-max pt-10 lg:lg:px-section-padding">
       <TagSummartComponent className="col-start-1 col-end-10 row-start-1 row-end-2">
         <TagComponent className="flex w-100% justify-center lg:block lg:w-auto">
           <div className="block w-100% md:w-auto lg:flex">
@@ -59,7 +59,7 @@ export function HomeSecondSection() {
         </TagComponent>
       </TagSummartComponent>
 
-      <div className="flex flex-col grid-cols-4 gap-8 pt-7 md:grid">
+      <div className="flex grid-cols-4 flex-col gap-8 pt-7 md:grid">
         {mockTrendingTopics.map((topic) => (
           <CardComponent key={topic.id} className="grid grid-cols-2 md:block">
             <CardComponent.PictureWrapper
@@ -76,13 +76,13 @@ export function HomeSecondSection() {
                 media="(max-width: 767px)"
               />
             </CardComponent.PictureWrapper>
-            <CardComponent.Tag className="block col-start-1 col-end-1 row-start-1 row-end-2 mt-3 mb-1">
+            <CardComponent.Tag className="col-start-1 col-end-1 row-start-1 row-end-2 mt-3 mb-1 block">
               <CardComponent.TagText className=" THE MONITOR font-WiredMono">
                 SECURITY
               </CardComponent.TagText>
             </CardComponent.Tag>
             <CardComponent.Title
-              className="block col-start-1 col-end-1 row-start-1 row-end-3 mt-12 md:mt-0"
+              className="col-start-1 col-end-1 row-start-1 row-end-3 mt-12 block md:mt-0"
               titleProps={{
                 className:
                   "text-lg font-LabGrotesque leading-custom-line-height-md	",
@@ -93,7 +93,7 @@ export function HomeSecondSection() {
             <CardComponent.Description className="col-start-1 col-end-1 row-start-4 row-end-5 my-3 font-LabGrotesque !text-sm  ">
               {topic.summary}
             </CardComponent.Description>
-            <CardComponent.Author className="block col-start-1 col-end-1 row-start-5 mt-2 text-xs uppercase ">
+            <CardComponent.Author className="col-start-1 col-end-1 row-start-5 mt-2 block text-xs uppercase ">
               {topic.author}
             </CardComponent.Author>
           </CardComponent>
