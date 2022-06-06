@@ -151,6 +151,20 @@ function excludeInternatTags(tags: Array<string>) {
   return tags.filter((tag) => !tag.startsWith("@"));
 }
 
+interface CustomScript {
+  locale: "body" | "head";
+  src: string;
+  async: boolean;
+  defer: boolean;
+}
+function addCustomScriptTag({ locale, src, async, defer }: CustomScript) {
+  const script = document.createElement("script");
+  script.src = src;
+  script.async = async;
+  script.defer = defer;
+  document[locale].appendChild(script);
+}
+
 export {
   getRequiredGlobalEnvVar,
   getRequiredServerEnvVar,
@@ -165,4 +179,5 @@ export {
   removeTrailingSlash,
   excludeInternatTags,
   AnchorOrLink,
+  addCustomScriptTag,
 };

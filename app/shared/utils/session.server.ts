@@ -44,6 +44,20 @@ async function getFistTagsSection() {
   });
 }
 
+async function getPostToPostPage(slug: string) {
+  try {
+    const data = await GhostApi.posts.read({ slug });
+    console.log(
+      "DATA-----------------------------------------------------------",
+      data
+    );
+    throw data;
+    return data;
+  } catch {
+    return { error: true, message: "Post not found" };
+  }
+}
+
 async function GhostApiBrowse(params: Params) {
   return GhostApi.posts.browse({
     filter: "tags:[highlight]",
@@ -63,4 +77,5 @@ export {
   getTrending,
   getLongreads,
   getFistTagsSection,
+  getPostToPostPage,
 };

@@ -39,7 +39,6 @@ const mockDataMostRecent = [
 export function HomeFirstSection() {
   const state = useLoaderData();
 
-  console.log(state.recentPosts);
   return (
     <section
       className="mx-auto grid  grid-cols-1  lg:max-w-section-max  lg:grid-cols-[repeat(12,_1fr)] lg:gap-x-10
